@@ -45,6 +45,8 @@ default: mkdir
 
 Prebuilt binaries are available for windows only.<br>
 #### Windows users:
+> The exe file may be incorrectly flagged as malware as it is not commonly downloaded or [code-signed](https://en.wikipedia.org/wiki/Code_signing) as it requires a lot of money. <br>
+Incase of any doubts, users can check any file in this repository and build the source themselves just like how non-windows users have to.<br>
 - download the executable file from the latest release
 - create a folder at a location of their choice
 - move the downloaded executable file to that new folder
