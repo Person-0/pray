@@ -36,8 +36,6 @@ default: python __main__.py
 default: mkdir
 ```
 
-<br>
-
 # Installation
 
 > how to add stuff to PATH in 
