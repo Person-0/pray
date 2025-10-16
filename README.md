@@ -62,7 +62,7 @@ Incase of any doubts, users can check any file in this repository and build the 
 ```
 pip install pyinstaller
 ```
-- clone this repository, move it to somewhere if needed, open your favourite terminal and cd into the repository's root folder i.e the one that contains README.md, LICENSE etc.
+- clone this repository, move it anywhere if required, open your favourite terminal and cd into the repository's root folder i.e the one that contains README.md, LICENSE etc.
 - run the following command to generate the executable for your OS
 ```
 pyinstaller -F src/main.py
