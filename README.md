@@ -3,7 +3,7 @@ a terminal program that you can add in your PATH which runs commands specified i
 > prayer refers to a `.prayer` file <br>
 
 ## Usage
-- [Install the program](#installation)
+- [install the program](#installation)
 - create a prayer in your project's root directory
 - if you do not want to see any debug logs from this program, the top line of your prayer should be "nolog".
 - every command is specified as `command name: command` in subsequent lines.
@@ -45,20 +45,20 @@ default: mkdir
 
 Prebuilt binaries are available for windows only.<br>
 #### Windows users:
-> The exe file may be incorrectly flagged as malware as it is not commonly downloaded or [code-signed](https://en.wikipedia.org/wiki/Code_signing) as it requires a lot of money. <br>
-Incase of any doubts, users can check any file in this repository and build the source themselves just like how non-windows users have to.<br>
+> the exe file may be incorrectly flagged as malware as it is not commonly downloaded or [code-signed](https://en.wikipedia.org/wiki/Code_signing) as it requires a lot of money. <br>
+incase of any doubts, users can check any file in this repository and build the source themselves just like how non-windows users have to.<br>
 - download the executable file from the latest release
-- create a folder at a location of their choice
+- create a folder at a location of your choice
 - move the downloaded executable file to that new folder
 - ensure that the executable file's filename is `pray.exe`
 - add the new folder's location to your PATH
-- restart your terminal and run `pray` to check whether the installation was successful or not. If it was, you will most likely see an error stating that a prayer is needed. If it was not, you most likely messed up folder paths. recheck or restart if required.
-- Done! now go back to [usage](#usage).
+- restart your terminal and run `pray` to check whether the installation was successful or not. if it was, you will most likely see an error stating that ".prayer is needed". if it was not, you will see something like "pray is not a valid command name" and you most likely messed up the folder paths / adding it to your PATH. recheck or restart the whole process again if required.
+- done! now go back to [usage](#usage).
 
 
 #### Other OS users need to build the program themselves using the following steps:
-- Requirements: [python](https://www.python.org/), [pip](https://pypi.org/project/pip/)
-- Install pyinstaller: 
+- requirements: [python](https://www.python.org/), [pip](https://pypi.org/project/pip/)
+- install pyinstaller: 
 ```
 pip install pyinstaller
 ```
@@ -71,8 +71,8 @@ pyinstaller -F src/main.py
 - rename the executable file to `pray.exe`
 - add the location of the dist folder in your PATH
 - restart your terminal and run `pray` to check whether the installation was successful or not. If it was, you will most likely see an error stating that a prayer is needed. If it was not, you most likely messed up folder paths. recheck or restart if required.
-- Done! now go back to [usage](#usage).
+- done! now go back to [usage](#usage).
 
 ## Contributing
-- The [src/main.py](./src/main.py) file is all there is for now.
-- Pull requests are welcome.
+- the [src/main.py](./src/main.py) file is all there is for now.
+- pull requests are welcome.
