@@ -50,7 +50,7 @@ incase of any doubts, users can check any file in this repository and build the 
 - download the executable file from the latest release
 - create a folder at a location of your choice
 - move the downloaded executable file to that new folder
-- ensure that the executable file's filename is `pray` so that `pray` is recognized as a command name in the terminal
+- ensure that the executable file's name is `pray.exe` so that `pray` is recognized as a command name in the terminal
 - add the new folder's location to your PATH
 - restart your terminal and run `pray` to check whether the installation was successful or not. if it was, you will most likely see an error stating that ".prayer is needed". if it was not, you will see something like "pray is not a valid command name" and you most likely messed up the folder paths / adding it to your PATH. recheck or restart the whole process again if required.
 - done! now go back to [usage](#usage).
@@ -68,7 +68,7 @@ pip install pyinstaller
 pyinstaller -F src/main.py
 ```
 - the executable will be generated inside a dist folder that is automatically created by running the previous command
-- rename the executable file to `pray.exe`
+- rename the executable file's filename to `pray` so that `pray` is recognized as a command name in the terminal
 - add the location of the dist folder in your PATH
 - restart your terminal and run `pray` to check whether the installation was successful or not. If it was, you will most likely see an error stating that a prayer is needed. If it was not, you most likely messed up folder paths. recheck or restart if required.
 - done! now go back to [usage](#usage).
