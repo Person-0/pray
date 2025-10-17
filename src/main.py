@@ -40,7 +40,8 @@ try:
 
     while len(curPath) > 0:
         try:
-            with open(os.path.join(*curPath, ".prayer"), "r") as file:
+            prayer_path = "/".join(curPath) + "/.prayer"
+            with open(prayer_path, "r") as file:
                 lines = file.readlines()
                 line_num = 0
                 for line in lines:
@@ -54,6 +55,7 @@ try:
                             if len(cmd) > 0:
                                 if len(cmd) > 0: 
                                     if cmdname == record[0]:
+                                        curPath = []
                                         cmd_built = cmd + cmdargs
                                         log("running command:", cmd_built)
                                         os.system(cmd_built)
@@ -68,12 +70,17 @@ try:
                         else:
                             log(".prayer contains invalid record on line ", line_num)
                             run_status = run_statuses["parse_error"]
+
         except FileNotFoundError:
             run_status = run_statuses["file_not_found"]
+
         except Exception as e:
             log(e)
-            curPath = []
-        curPath.pop()
+            break
+
+        # curPath can be an empty list
+        if len(curPath) > 0:
+            curPath.pop()
 
     if not run_status == run_statuses["success"]:
         status_text = "?"
