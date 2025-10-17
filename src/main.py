@@ -11,7 +11,7 @@ run_statuses = {
     "start": 0,
     "success": 1,
     "path_parse_error": 2,
-    "file_not_found": 3,
+    "prayer_not_found": 3,
     "parse_error": 4
 }
 
