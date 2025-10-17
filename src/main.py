@@ -72,7 +72,7 @@ try:
                             run_status = run_statuses["parse_error"]
 
         except FileNotFoundError:
-            run_status = run_statuses["file_not_found"]
+            run_status = run_statuses["prayer_not_found"]
 
         except Exception as e:
             log(e)
