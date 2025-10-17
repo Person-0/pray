@@ -6,7 +6,8 @@ a terminal program that you can add in your PATH which runs commands specified i
 - [install the program](#installation)
 - create a prayer in your project's root directory
 - if you do not want to see any debug logs from this program, the top line of your prayer should be "nolog".
-- every command is specified as `command name: command` in subsequent lines.
+- every command is specified as `command-name: command` in subsequent lines.
+- command names must not contain spaces and it is recommended to not use special characters other than underscores or dashes.
 - the default command that runs when no command name is specific is named `default`.
 - commands can be executed by running the following command in the terminal with the working directory which itself contains the prayer or is a subfolder of a folder that contains the prayer.
 ```
