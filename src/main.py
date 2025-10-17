@@ -4,7 +4,7 @@ import os
 nolog = False
 def log(*e):
     if not nolog:
-        print("pray:", *e)
+        print("\n" + "pray:", *e, "\n")
 
 run_status = 0
 run_statuses = {
