@@ -54,7 +54,9 @@ try:
                             if len(cmd) > 0:
                                 if len(cmd) > 0: 
                                     if cmdname == record[0]:
-                                        os.system(cmd + cmdargs)
+                                        cmd_built = cmd + cmdargs
+                                        log("running command:", cmd_built)
+                                        os.system(cmd_built)
                                         run_status = run_statuses["success"]
                                         break
                                 else:
