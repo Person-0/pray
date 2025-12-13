@@ -19,21 +19,25 @@ pray <command-name> arg1 arg2 ...
 
 
 ## Prayer examples
+> `#` is used to specify a comment in the prayer
 #### prayer for running your python script
 - running the command `pray` in the directory where this prayer is saved or any subfolder of the same would result in the execution of `python script.py` whereas running the command `pray script2` would result in the execution of `python script2.py`.
 ```
+# python script prayer
 default: python script.py
 script2: python script2.py
 ```
 
 #### prayer for running your `__main__.py` file with no debug logs (if any) from the pray program.
 ```
+# python project prayer
 nolog
 default: python __main__.py
 ```
 
 #### prayer for simply renaming the mkdir command to pray
 ```
+# mkdir renaming prayer
 default: mkdir
 ```
 

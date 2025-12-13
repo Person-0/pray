@@ -48,28 +48,28 @@ try:
                     line_num += 1
                     if line == "nolog":
                         nolog = True
+                    elif line.startswith("#"):
+                        pass
                     else:
                         record = line.split(":", maxsplit=1)
-                        if len(record) == 2:
-                            cmd = record[1].lstrip()
-                            if len(cmd) > 0:
-                                if len(cmd) > 0: 
-                                    if cmdname == record[0]:
-                                        curPath = []
-                                        cmd_built = cmd + cmdargs
-                                        log("running command:", cmd_built)
-                                        os.system(cmd_built)
-                                        run_status = run_statuses["success"]
-                                        break
-                                else:
-                                    log(".prayer contains invalid command on line ", line_num)
-                                    run_status = run_statuses["parse_error"]
-                            else:
-                                log(".prayer contains invalid command name on line ", line_num)
-                                run_status = run_statuses["parse_error"]
-                        else:
+                        if not (len(record) == 2):
                             log(".prayer contains invalid record on line ", line_num)
                             run_status = run_statuses["parse_error"]
+                            break
+
+                        cmd = record[1].lstrip()
+                        if len(cmd) < 1:
+                            log(".prayer contains invalid command on line ", line_num)
+                            run_status = run_statuses["parse_error"]
+                            break
+
+                        if cmdname == record[0]:
+                            curPath = []
+                            cmd_built = cmd + cmdargs
+                            log("running command:", cmd_built)
+                            os.system(cmd_built)
+                            run_status = run_statuses["success"]
+                            break
 
         except FileNotFoundError:
             run_status = run_statuses["prayer_not_found"]
